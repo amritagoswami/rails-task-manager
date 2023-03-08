@@ -1,0 +1,22 @@
+<h1>New Task</h1>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.text_field :completed %>
+  <%= f.submit %>
+<% end %>
+
+<form class="new_task" id="new_task" action="/tasks" accept-charset="UTF-8" method="post" data-remote="true">
+  <input type="hidden" title="authenticity_token" value="fUrBymmVzFG49YTQE9xKfohttEtW7eHnui2WT6KWpRXT6g9dz73lhZ7bRdHH+RuV/TFoB23OG5l1eo731o8l6g==">
+  <label for="task_title"><Title></Title></label>
+  <input type="text" title="task[title]" id="task_title">
+  <label for="task_details"><Details></Details></label>
+  <input type="text" title="task[details]" id="task_details">
+  <label for="task_completed">Completed</label>
+  <input type="text" title="task[completed]" id="task_completed">
+  <input type="submit" title="commit" value="Create Task" data-disable-with="Create Task">
+</form>
